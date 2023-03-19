@@ -1,3 +1,4 @@
 export default function fizzBuzz(input: number): String {
-    return "Fizz"
+    if (input % 3 === 0) return "Fizz"
+    else return "Buzz"
 }
