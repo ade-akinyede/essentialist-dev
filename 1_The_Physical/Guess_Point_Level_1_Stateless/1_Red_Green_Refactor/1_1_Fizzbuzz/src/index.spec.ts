@@ -23,10 +23,10 @@ describe("fizzbuzz", () => {
     })
 
     it('should return the string for numbers that are neither multiples of 3 nor 5', () => {
-        expect(fizzBuzz(7)).toBe('7')
+        expect(fizzBuzz(1)).toBe('1')
         expect(fizzBuzz(11)).toBe('11')
         expect(fizzBuzz(52)).toBe('52')
-        expect(fizzBuzz(77)).toBe('77')
+        expect(fizzBuzz(98)).toBe('98')
     })
 
 });
