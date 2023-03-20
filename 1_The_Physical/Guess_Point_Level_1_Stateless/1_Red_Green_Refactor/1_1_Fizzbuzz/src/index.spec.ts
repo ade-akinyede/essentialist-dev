@@ -1,6 +1,7 @@
 import { fizzBuzz, FizzBuzzRange } from './fizzbuzz'
 
 describe("fizzbuzz", () => {
+    // Test range 1 to 100, inclusive
     const inputRange: Array<number> = [...Array(100)].map((_,i) => i+1)
 
     it('should return the word "Fizz" for multiples of 3', () => {
