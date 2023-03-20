@@ -6,9 +6,9 @@ type Enumerate<N extends number, Acc extends number[] = []> = Acc['length'] exte
 
 type IntRange<F extends number, T extends number> = Exclude<Enumerate<T>, Enumerate<F>>
 
-type FizzBuzzRange = IntRange<1, 101>
+export type FizzBuzzRange = IntRange<1, 101>
 
-export default function fizzBuzz(input: FizzBuzzRange): String {
+export function fizzBuzz(input: FizzBuzzRange): String {
     if (input % 3 === 0 && input % 5 === 0) return "FizzBuzz"
     else if (input % 3 === 0) return "Fizz"
     else if (input % 5 === 0) return "Buzz"
