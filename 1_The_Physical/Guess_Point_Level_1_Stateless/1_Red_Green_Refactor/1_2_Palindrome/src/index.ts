@@ -1,3 +1,5 @@
 export const isAPalindrome = (word: string) => {
-    return true
+    const normalisedWord = word.trim().toLocaleLowerCase()
+    const reversed = Array.from(normalisedWord).reverse().join('')
+    return normalisedWord === reversed
 }
