@@ -9,6 +9,14 @@ export class PasswordValidator {
                 error: 'Password must be between 5 and 15 characters long'
             }
         }
+
+        const hasDigit = /\d/.test(password)
+        if (!hasDigit) {
+            return {
+                result: false,
+                error: 'Password must have at least one digit'
+            }
+        }
         return {
             result: true,
             error: 'Not yet implemented'

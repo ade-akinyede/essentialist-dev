@@ -16,5 +16,12 @@ describe('password validator', () => {
             error: "Password must be between 5 and 15 characters long"
         })
     })
+
+    it('invalidates password without one digit', () => {
+        expect(passwordValidator.validate("just1ntime")).toStrictEqual({
+            result: false,
+            error: "Password must have at least one digit"
+        })
+    })
 })
 
