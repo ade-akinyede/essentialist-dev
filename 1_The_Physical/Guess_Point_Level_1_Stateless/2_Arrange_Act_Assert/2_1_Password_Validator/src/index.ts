@@ -17,6 +17,14 @@ export class PasswordValidator {
                 error: 'Password must have at least one digit'
             }
         }
+
+        const hasUpperCase =  /[A-Z]/.test(password)
+        if (!hasUpperCase) {
+            return {
+                result: false,
+                error: 'Password must have at least one upper case letter'
+            }
+        }
         return {
             result: true,
             error: 'Not yet implemented'

@@ -17,10 +17,17 @@ describe('password validator', () => {
         })
     })
 
-    it('invalidates password without one digit', () => {
-        expect(passwordValidator.validate("just1ntime")).toStrictEqual({
+    it('invalidates password without at least one digit', () => {
+        expect(passwordValidator.validate("justntime")).toStrictEqual({
             result: false,
             error: "Password must have at least one digit"
+        })
+    })
+
+    it('invalidates password without at least one upper case letter', () => {
+        expect(passwordValidator.validate('jast1ti')).toStrictEqual({
+            result: false,
+            error: 'Password must have at least one upper case letter'
         })
     })
 })
